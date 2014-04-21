@@ -6,8 +6,8 @@ Release:        1.git%{shortcommit}%{?dist}
 Summary:        A popup window switcher and launcher
 
 License:        MIT
-URL:            https://github.com/DaveDavenport/rofi
-Source0:        https://github.com/DaveDavenport/rofi/archive/%{commit}/rofi-%{commit}.tar.gz
+URL:            https://github.com/DaveDavenport/%{name}
+Source0:        https://github.com/DaveDavenport/%{name}/archive/%{commit}/${name}-%{commit}.tar.gz
 
 BuildRequires:  autoconf
 BuildRequires:  automake
