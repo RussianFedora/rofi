@@ -10,6 +10,7 @@ URL:            https://github.com/DaveDavenport/rofi
 Source0:        https://github.com/DaveDavenport/rofi/archive/%{commit}/rofi-%{commit}.tar.gz
 
 BuildRequires:  autoconf
+BuildRequires:  automake
 BuildRequires:  pkgconfig(xft)
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(xinerama)
