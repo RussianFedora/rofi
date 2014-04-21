@@ -5,7 +5,7 @@ Version:        0
 Release:        1.git%{shortcommit}%{?dist}
 Summary:        A popup window switcher and launcher
 
-License:        MIT/X11
+License:        MIT
 URL:            https://github.com/DaveDavenport/rofi
 Source0:        https://github.com/DaveDavenport/rofi/archive/%{commit}/rofi-%{commit}.tar.gz
 
