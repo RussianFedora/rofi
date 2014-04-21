@@ -1,3 +1,4 @@
+%global commit d64345ccbef1a6ef61a3e693084b6f73480fb176
 Name:           rofi
 Version:        0
 Release:        1%{?dist}
@@ -5,7 +6,6 @@ Summary:        A popup window switcher and launcher
 
 License:        MIT/X11
 URL:            https://github.com/DaveDavenport/rofi
-%global commit d64345ccbef1a6ef61a3e693084b6f73480fb176
 Source0:        https://github.com/DaveDavenport/rofi/archive/%{commit}/rofi-%{commit}.tar.gz
 
 BuildRequires:  autoconf
@@ -33,7 +33,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %doc COPYING README.md
 %{_bindir}/rofi
-%{_mandir}/man1/rofi.1.gz
+%{_mandir}/man1/rofi.1.*
 
 %changelog
 * Sun Apr 20 2014 Dmitry Melnichenko
