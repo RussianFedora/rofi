@@ -7,7 +7,7 @@ Summary:        A popup window switcher and launcher
 
 License:        MIT
 URL:            https://github.com/DaveDavenport/%{name}
-Source0:        https://github.com/DaveDavenport/%{name}/archive/%{commit}/${name}-%{commit}.tar.gz
+Source0:        https://github.com/DaveDavenport/%{name}/archive/%{commit}/%{name}-%{commit}.tar.gz
 
 BuildRequires:  autoconf
 BuildRequires:  automake
