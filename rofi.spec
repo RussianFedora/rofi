@@ -1,7 +1,8 @@
 %global commit d64345ccbef1a6ef61a3e693084b6f73480fb176
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:           rofi
 Version:        0
-Release:        1%{?dist}
+Release:        1.git%{shortcommit}%{?dist}
 Summary:        A popup window switcher and launcher
 
 License:        MIT/X11
@@ -36,5 +37,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/rofi.1.*
 
 %changelog
-* Sun Apr 20 2014 Dmitry Melnichenko
+* Sun Apr 20 2014 Dmitry Melnichenko 0-1.gitd64345c
 - Initial import based on commit d64345ccbef1a6ef61a3e693084b6f73480fb176
