@@ -1,42 +1,46 @@
-%global commit d64345ccbef1a6ef61a3e693084b6f73480fb176
-%global shortcommit %(c=%{commit}; echo ${c:0:7})
-Name:           rofi
-Version:        0
-Release:        1.git%{shortcommit}%{?dist}
-Summary:        A popup window switcher and launcher
+Name: rofi
+Version: 0.15.7
+Release: 1%{?dist}
+Summary: A window switcher, run dialog and dmenu replacement
 
-License:        MIT
-URL:            https://github.com/DaveDavenport/%{name}
-Source0:        https://github.com/DaveDavenport/%{name}/archive/%{commit}/%{name}-%{commit}.tar.gz
+License: MIT
+URL: https://davedavenport.github.io/rofi/
+Source0: https://github.com/DaveDavenport/rofi/releases/download/%{version}/%{name}-%{version}.tar.gz
 
-BuildRequires:  autoconf
-BuildRequires:  automake
-BuildRequires:  pkgconfig(xft)
-BuildRequires:  pkgconfig(x11)
-BuildRequires:  pkgconfig(xinerama)
-BuildRequires:  pkgconfig(libxdg-basedir)
-BuildRequires:  i3
+BuildRequires: make
+BuildRequires: automake 
+BuildRequires: autoconf 
+BuildRequires: pkgconfig(xft)
+BuildRequires: pkgconfig(x11)
+BuildRequires: pkgconfig(pango)
+BuildRequires: pkgconfig(xinerama)
+BuildRequires: pkgconfig(libxdg-basedir)
 
 %description
-A popup window switcher and launcher, requiring only xlib and xft.
+A popup window switcher roughly based on superswitcher,
+requiring only xlib and pango.
 
 %prep
-%setup -qn %{name}-%{commit}
-autoreconf --install
+%setup -q
+autoreconf -i
 
 %build
 %configure
-make %{?_smp_mflags}
+%make_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 %make_install
 
 %files
-%doc COPYING README.md
-%{_bindir}/rofi
+%doc AUTHORS Changelog README.html README.md 
+%license COPYING
+%{_bindir}/%{name}
 %{_mandir}/man1/rofi.1.*
 
 %changelog
+* Fri Jul 24 2015 Maxim Orlov <murmansksity@gmail.com> - 0.15.7-1.R
+- Update to 0.15.7
+
 * Sun Apr 20 2014 Dmitry Melnichenko 0-1.gitd64345c
 - Initial import based on commit d64345ccbef1a6ef61a3e693084b6f73480fb176
