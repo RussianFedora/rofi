@@ -33,7 +33,7 @@ rm -rf $RPM_BUILD_ROOT
 %make_install
 
 %files
-%doc AUTHORS Changelog README.html README.md 
+%doc AUTHORS Changelog README.html README.md Examples
 %license COPYING
 %{_bindir}/%{name}
 %{_mandir}/man1/rofi.1.*
