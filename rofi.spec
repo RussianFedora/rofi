@@ -1,30 +1,27 @@
-Name: rofi
-Version: 0.15.8
-Release: 1%{?dist}
-Summary: A window switcher, run dialog and dmenu replacement
+Name:          rofi
+Version:       0.15.10
+Release:       1%{?dist}
+Summary:       A window switcher, run dialog and dmenu replacement
 
-License: MIT
-URL: https://davedavenport.github.io/rofi/
-Source0: https://github.com/DaveDavenport/%{name}/archive/%{version}.tar.gz
+License:       MIT
+URL:           https://davedavenport.github.io/rofi/
+Source0:       https://github.com/DaveDavenport/%{name}/releases/download/%{version}/%{name}-%{version}.tar.gz
 
-BuildRequires: make
-BuildRequires: automake 
-BuildRequires: autoconf 
-BuildRequires: pkgconfig(xft)
 BuildRequires: pkgconfig(x11)
-BuildRequires: pkgconfig(pango)
 BuildRequires: pkgconfig(xinerama)
+BuildRequires: pkgconfig(libstartup-notification-1.0)
+BuildRequires: pkgconfig(pangocairo)
+BuildRequires: pkgconfig(cairo-xlib)
+BuildRequires: i3
 
 %description
 A popup window switcher roughly based on superswitcher, requiring
 only xlib and pango.
-
+                                                              
 %prep
 %setup -q
 
 %build
-autoreconf -i
-
 %configure --disable-silent-rules
 %make_build
 
@@ -35,13 +32,17 @@ autoreconf -i
 make test
 
 %files
-%doc AUTHORS Changelog README.md Examples
+%doc AUTHORS Changelog README.html README.md Examples
 %license COPYING
 %{_bindir}/%{name}
 %{_bindir}/%{name}-sensible-terminal
 %{_mandir}/man1/%{name}.1.*
+%{_mandir}/man1/%{name}-sensible-terminal.1.*
 
 %changelog
+* Sun Oct 25 2015 Maxim Orlov <murmansksity@gmail.com> - 0.15.10-1.R
+- Update to 0.15.10
+
 * Sun Sep 06 2015 Maxim Orlov <murmansksity@gmail.com> - 0.15.8-1.R
 - Update to 0.15.8
 
