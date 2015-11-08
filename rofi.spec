@@ -1,5 +1,5 @@
 Name:          rofi
-Version:       0.15.10
+Version:       0.15.11
 Release:       1%{?dist}
 Summary:       A window switcher, run dialog and dmenu replacement
 
@@ -32,7 +32,7 @@ only xlib and pango.
 make test
 
 %files
-%doc AUTHORS Changelog README.html README.md Examples
+%doc AUTHORS Changelog README.md Examples
 %license COPYING
 %{_bindir}/%{name}
 %{_bindir}/%{name}-sensible-terminal
@@ -40,6 +40,9 @@ make test
 %{_mandir}/man1/%{name}-sensible-terminal.1.*
 
 %changelog
+* Sun Nov 08 2015 Maxim Orlov <murmansksity@gmail.com> - 0.15.11-1.R
+- Update to 0.15.11
+
 * Sun Oct 25 2015 Maxim Orlov <murmansksity@gmail.com> - 0.15.10-1.R
 - Update to 0.15.10
 
