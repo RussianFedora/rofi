@@ -9,6 +9,7 @@ Source0:       https://github.com/DaveDavenport/%{name}/releases/download/%{vers
 
 BuildRequires: pkgconfig(x11)
 BuildRequires: pkgconfig(xinerama)
+BuildRequires: pkgconfig(glib-2.0) >= 2.40
 BuildRequires: pkgconfig(libstartup-notification-1.0)
 BuildRequires: pkgconfig(pangocairo)
 BuildRequires: pkgconfig(cairo-xlib)
