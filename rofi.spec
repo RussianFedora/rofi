@@ -1,3 +1,5 @@
+%global glib2_version 2.40
+
 Name:          rofi
 Version:       0.15.11
 Release:       1%{?dist}
@@ -7,13 +9,13 @@ License:       MIT
 URL:           https://davedavenport.github.io/rofi/
 Source0:       https://github.com/DaveDavenport/%{name}/releases/download/%{version}/%{name}-%{version}.tar.gz
 
-BuildRequires: pkgconfig(x11)
-BuildRequires: pkgconfig(xinerama)
-BuildRequires: pkgconfig(glib-2.0) >= 2.40
+BuildRequires: i3
+BuildRequires: pkgconfig(cairo-xlib)
+BuildRequires: pkgconfig(glib-2.0) >= %{glib2_version}
 BuildRequires: pkgconfig(libstartup-notification-1.0)
 BuildRequires: pkgconfig(pangocairo)
-BuildRequires: pkgconfig(cairo-xlib)
-BuildRequires: i3
+BuildRequires: pkgconfig(x11)
+BuildRequires: pkgconfig(xinerama)
 
 %description
 A popup window switcher roughly based on superswitcher, requiring
@@ -23,8 +25,8 @@ only xlib and pango.
 %setup -q
 
 %build
-%configure --disable-silent-rules
-%make_build
+%configure --enable-timings
+%make_build V=1
 
 %install
 %make_install
