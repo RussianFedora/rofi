@@ -1,7 +1,7 @@
 %global glib2_version 2.40
 
 Name:          rofi
-Version:       0.15.11
+Version:       0.15.12
 Release:       1%{?dist}
 Summary:       A window switcher, run dialog and dmenu replacement
 
@@ -43,6 +43,9 @@ make test
 %{_mandir}/man1/%{name}-sensible-terminal.1.*
 
 %changelog
+* Sun Dec 27 2015 Maxim Orlov <murmansksity@gmail.com> - 0.15.12-1.R
+- Update to 0.15.12
+
 * Sun Nov 08 2015 Maxim Orlov <murmansksity@gmail.com> - 0.15.11-1.R
 - Update to 0.15.11
 
