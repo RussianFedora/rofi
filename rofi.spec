@@ -1,38 +1,43 @@
 %global glib2_version 2.40
 
 Name:          rofi
-Version:       0.15.12
-Release:       1%{?dist}
+Version:       1.0.0
+Release:       1.rc1%{?dist}
 Summary:       A window switcher, run dialog and dmenu replacement
 
 License:       MIT
 URL:           https://davedavenport.github.io/rofi/
-Source0:       https://github.com/DaveDavenport/%{name}/releases/download/%{version}/%{name}-%{version}.tar.gz
+Source0:       https://github.com/DaveDavenport/%{name}/releases/download/%{version}-RC1/%{name}-%{version}-RC1.tar.gz
 
 BuildRequires: i3
-BuildRequires: pkgconfig(cairo-xlib)
+BuildRequires: pkgconfig(cairo)
+BuildRequires: pkgconfig(cairo-xcb)
 BuildRequires: pkgconfig(glib-2.0) >= %{glib2_version}
 BuildRequires: pkgconfig(libstartup-notification-1.0)
+BuildRequires: pkgconfig(pango)
 BuildRequires: pkgconfig(pangocairo)
 BuildRequires: pkgconfig(x11)
-BuildRequires: pkgconfig(xinerama)
+BuildRequires: pkgconfig(x11-xcb)
+BuildRequires: pkgconfig(xcb)
+BuildRequires: pkgconfig(xcb-ewmh)
+BuildRequires: pkgconfig(xcb-icccm)
+BuildRequires: pkgconfig(xcb-util)
+BuildRequires: pkgconfig(xkbcommon)
+BuildRequires: pkgconfig(xkbcommon-x11)
 
 %description
 A popup window switcher roughly based on superswitcher, requiring
 only xlib and pango.
                                                               
 %prep
-%setup -q
+%autosetup -n %{name}-%{version}-RC1
 
 %build
-%configure --enable-timings
+%configure
 %make_build V=1
 
 %install
 %make_install
-
-%check
-make test
 
 %files
 %doc AUTHORS Changelog README.md Examples
@@ -43,6 +48,13 @@ make test
 %{_mandir}/man1/%{name}-sensible-terminal.1.*
 
 %changelog
+* Sun Apr 03 2016 Maxim Orlov <murmansksity@gmail.com> - 1.0.0-1.rc1.R
+- Update to 1.0.0rc1
+- Add more BR's
+- Use %%autosetup macro
+- Remove tests
+- Remove --enable-timings
+
 * Sun Dec 27 2015 Maxim Orlov <murmansksity@gmail.com> - 0.15.12-1.R
 - Update to 0.15.12
 
