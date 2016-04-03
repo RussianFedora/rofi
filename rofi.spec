@@ -2,7 +2,7 @@
 
 Name:          rofi
 Version:       1.0.0
-Release:       1.rc1%{?dist}
+Release:       0.1.rc1%{?dist}
 Summary:       A window switcher, run dialog and dmenu replacement
 
 License:       MIT
@@ -48,7 +48,7 @@ only xlib and pango.
 %{_mandir}/man1/%{name}-sensible-terminal.1.*
 
 %changelog
-* Sun Apr 03 2016 Maxim Orlov <murmansksity@gmail.com> - 1.0.0-1.rc1.R
+* Sun Apr 03 2016 Maxim Orlov <murmansksity@gmail.com> - 1.0.0-0.1.rc1.R
 - Update to 1.0.0rc1
 - Add more BR's
 - Use %%autosetup macro
