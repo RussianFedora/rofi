@@ -11,13 +11,10 @@ Source0:       https://github.com/DaveDavenport/%{name}/releases/download/%{vers
 
 BuildRequires: i3
 BuildRequires: pkgconfig(cairo)
-BuildRequires: pkgconfig(cairo-xcb)
 BuildRequires: pkgconfig(glib-2.0) >= %{glib2_version}
 BuildRequires: pkgconfig(libstartup-notification-1.0)
 BuildRequires: pkgconfig(pango)
-BuildRequires: pkgconfig(pangocairo)
 BuildRequires: pkgconfig(x11)
-BuildRequires: pkgconfig(x11-xcb)
 BuildRequires: pkgconfig(xcb)
 BuildRequires: pkgconfig(xcb-ewmh)
 BuildRequires: pkgconfig(xcb-icccm)
