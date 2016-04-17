@@ -1,13 +1,14 @@
 %global glib2_version 2.40
+%global xkbcommon_version 0.5.0
 
 Name:          rofi
 Version:       1.0.0
-Release:       0.1.rc1%{?dist}
+Release:       1%{?dist}
 Summary:       A window switcher, run dialog and dmenu replacement
 
 License:       MIT
 URL:           https://davedavenport.github.io/rofi/
-Source0:       https://github.com/DaveDavenport/%{name}/releases/download/%{version}-RC1/%{name}-%{version}-RC1.tar.gz
+Source0:       https://github.com/DaveDavenport/%{name}/releases/download/%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires: i3
 BuildRequires: pkgconfig(cairo)
@@ -19,7 +20,7 @@ BuildRequires: pkgconfig(xcb)
 BuildRequires: pkgconfig(xcb-ewmh)
 BuildRequires: pkgconfig(xcb-icccm)
 BuildRequires: pkgconfig(xcb-util)
-BuildRequires: pkgconfig(xkbcommon)
+BuildRequires: pkgconfig(xkbcommon) >= %{xkbcommon_version}
 BuildRequires: pkgconfig(xkbcommon-x11)
 
 %description
@@ -27,7 +28,7 @@ A popup window switcher roughly based on superswitcher, requiring
 only xlib and pango.
                                                               
 %prep
-%autosetup -n %{name}-%{version}-RC1
+%autosetup
 
 %build
 %configure
@@ -45,6 +46,10 @@ only xlib and pango.
 %{_mandir}/man1/%{name}-sensible-terminal.1.*
 
 %changelog
+* Sun Apr 17 2016 Maxim Orlov <murmansksity@gmail.com> - 1.0.0-1.R
+- Update to 1.0.0
+- Update xkbcommon dep version
+
 * Sun Apr 03 2016 Maxim Orlov <murmansksity@gmail.com> - 1.0.0-0.1.rc1.R
 - Update to 1.0.0rc1
 - Add more BR's
