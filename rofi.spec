@@ -48,7 +48,7 @@ only xlib and pango.
 %changelog
 * Sun Apr 17 2016 Maxim Orlov <murmansksity@gmail.com> - 1.0.0-1.R
 - Update to 1.0.0
-- Update xkbcommon dep version
+- Add xkbcommon dep version
 
 * Sun Apr 03 2016 Maxim Orlov <murmansksity@gmail.com> - 1.0.0-0.1.rc1.R
 - Update to 1.0.0rc1
