@@ -2,7 +2,7 @@
 %global xkbcommon_version 0.5.0
 
 Name:          rofi
-Version:       1.0.0
+Version:       1.0.1
 Release:       1%{?dist}
 Summary:       A window switcher, run dialog and dmenu replacement
 
@@ -46,6 +46,9 @@ only xlib and pango.
 %{_mandir}/man1/%{name}-sensible-terminal.1.*
 
 %changelog
+* Mon May 02 2016 Maxim Orlov <murmansksity@gmail.com> - 1.0.1-1.R
+- Update to 1.0.1
+
 * Sun Apr 17 2016 Maxim Orlov <murmansksity@gmail.com> - 1.0.0-1.R
 - Update to 1.0.0
 - Add xkbcommon dep version
