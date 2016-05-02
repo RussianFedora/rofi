@@ -24,8 +24,7 @@ BuildRequires: pkgconfig(xkbcommon) >= %{xkbcommon_version}
 BuildRequires: pkgconfig(xkbcommon-x11)
 
 %description
-A popup window switcher roughly based on superswitcher, requiring
-only xlib and pango.
+A popup window switcher roughly based on superswitcher.
                                                               
 %prep
 %autosetup
