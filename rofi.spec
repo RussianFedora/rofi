@@ -2,7 +2,7 @@
 %global xkbcommon_version 0.5.0
 
 Name:          rofi
-Version:       1.0.1
+Version:       1.1.0
 Release:       1%{?dist}
 Summary:       A window switcher, run dialog and dmenu replacement
 
@@ -45,6 +45,9 @@ A popup window switcher roughly based on superswitcher.
 %{_mandir}/man1/%{name}-sensible-terminal.1.*
 
 %changelog
+* Tue Jun 14 2016 Maxim Orlov <murmansksity@gmail.com> - 1.1.0-1.R
+- Update to 1.1.0
+
 * Mon May 02 2016 Maxim Orlov <murmansksity@gmail.com> - 1.0.1-1.R
 - Update to 1.0.1
 
