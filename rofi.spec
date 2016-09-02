@@ -3,7 +3,7 @@
 
 Name:          rofi
 Version:       1.2.0
-Release:       1%{?dist}
+Release:       2%{?dist}
 Summary:       A window switcher, run dialog and dmenu replacement
 
 License:       MIT
@@ -22,6 +22,7 @@ BuildRequires: pkgconfig(xcb-icccm)
 BuildRequires: pkgconfig(xcb-util)
 BuildRequires: pkgconfig(xkbcommon) >= %{xkbcommon_version}
 BuildRequires: pkgconfig(xkbcommon-x11)
+BuildRequires: pkgconfig(xcb-xrm)
 
 %description
 A popup window switcher roughly based on superswitcher.
@@ -45,6 +46,9 @@ A popup window switcher roughly based on superswitcher.
 %{_mandir}/man1/%{name}-sensible-terminal.1.*
 
 %changelog
+* Fri Sep 02 2016 Maxim Orlov <murmansksity@gmail.com> - 1.2.0-2.R
+- Add BR: pkgconfig(xcb-xrm)
+
 * Fri Aug 12 2016 Maxim Orlov <murmansksity@gmail.com> - 1.2.0-1.R
 - Update to 1.2.0
 
